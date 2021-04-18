@@ -8,7 +8,7 @@ import React from 'react'
     return (
         <div style = {{display: 'flex', margin: '4em', padding:'1em', justifyContent: 'space-between'}}>
             <div>{name}</div>
-            <div>{price}</div>
+            <div> ${price}</div>
             <div>
             <button onClick = {subtractOne} disabled = {qty <= 0} >-</button>
                 {qty}
