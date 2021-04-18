@@ -5,8 +5,6 @@ import CartItem from './CartItem'
     const initState = JSON.parse(window.localStorage.getItem('items'))
      const [items,setItems] = useState(initState|| initItems);
      
-
-
      const grandTotal = items.reduce((total, item)=>(total + item.qty * item.price),0).toFixed(2);
 
      const updateQty = (id, newQty) => setItems (items.map(item => {
@@ -15,11 +13,10 @@ import CartItem from './CartItem'
             }
             return item
         })
-    )
+     )
         useEffect(()=> {
             window.localStorage.setItem('items', JSON.stringify(items))
         },[items])
-
 
     return (
         <div>
